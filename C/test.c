@@ -9,11 +9,11 @@ void count(char s[10001]){
         else if(s[i]==' '||s[i]=='b'||s[i]=='B') sp++;
         else c++;
     }
-    printf("%d\n%d\n%d\n",v,c,sp);
+    printf("%d\n%d\n%d\n",v,c-1,sp);
 }
 
 int main(void){
     char sen[10001];
-    scanf("%[^\n]",&sen);
+    fgets(sen,10001,stdin);
     count(sen);
 }
