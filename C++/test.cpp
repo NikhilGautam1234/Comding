@@ -3,21 +3,21 @@ using namespace std;
 
 class area
 {
-    int length, breadth, a;
+    int len, b, a;
 
 public:
     area()
     {
-        length = 10;
-        breadth = 27;
+        len = 10;
+        b = 27;
         cout << "Name: NIKHIL\nUID: 21BCS9434\n";
-        cout << "Length = " << length << "\n";
-        cout << "Breadth = " << breadth << "\n";
+        cout << "Length = " << len << "\n";
+        cout << "Breadth = " << b << "\n";
     }
     area(int x, int y)
     {
-        length = x;
-        breadth = y;
+        len = x;
+        b = y;
     }
     void calc();
     void print();
@@ -25,7 +25,7 @@ public:
 };
 void area::calc()
 {
-    a = length * breadth;
+    a = len * b;
 }
 void area::print()
 {
@@ -37,13 +37,13 @@ area::~area()
 }
 int main()
 {
-    int length, breadth;
+    int len, b;
     area z1;
     z1.calc();
     z1.print();
-    cout << "Enter the length and breadth for parameterized constructor:\n";
-    cin >> length >> breadth;
-    area z2(length, breadth);
+    cout << "Enter the length and breadth for constructor:\n";
+    cin >> len >> b;
+    area z2(len, b);
     z2.calc();
     z2.print();
     return 0;
