@@ -1,12 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-class area
+class calcu
 {
     int len, b, a;
 
 public:
-    area()
+    calcu()
     {
         len = 10;
         b = 27;
@@ -14,36 +13,36 @@ public:
         cout << "Length = " << len << "\n";
         cout << "Breadth = " << b << "\n";
     }
-    area(int x, int y)
+    calcu(int x, int y)
     {
         len = x;
         b = y;
     }
     void calc();
     void print();
-    ~area();
+    ~calcu();
 };
-void area::calc()
+void calcu::calc()
 {
     a = len * b;
 }
-void area::print()
+void calcu::print()
 {
     cout << "Area = " << a << "\n";
 }
-area::~area()
+calcu::~calcu()
 {
     cout << "Object is being deleted\n";
 }
 int main()
 {
     int len, b;
-    area z1;
+    calcu z1;
     z1.calc();
     z1.print();
     cout << "Enter the length and breadth for constructor:\n";
     cin >> len >> b;
-    area z2(len, b);
+    calcu z2(len, b);
     z2.calc();
     z2.print();
     return 0;
