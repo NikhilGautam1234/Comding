@@ -2,20 +2,20 @@
 using namespace std;
 class calcu
 {
-    int len, b, a;
+    int lemgth, b, a;
 
 public:
     calcu()
     {
-        len = 10;
+        lemgth = 10;
         b = 27;
         cout << "Name: NIKHIL\nUID: 21BCS9434\n";
-        cout << "Length = " << len << "\n";
+        cout << "Length = " << lemgth << "\n";
         cout << "Breadth = " << b << "\n";
     }
     calcu(int x, int y)
     {
-        len = x;
+        lemgth = x;
         b = y;
     }
     void calc();
@@ -24,7 +24,7 @@ public:
 };
 void calcu::calc()
 {
-    a = len * b;
+    a = lemgth * b;
 }
 void calcu::print()
 {
@@ -36,13 +36,13 @@ calcu::~calcu()
 }
 int main()
 {
-    int len, b;
-    calcu z1;
-    z1.calc();
-    z1.print();
+    int lemgth, b;
+    calcu f;
+    f.calc();
+    f.print();
     cout << "Enter the length and breadth for constructor:\n";
-    cin >> len >> b;
-    calcu z2(len, b);
+    cin >> lemgth >> b;
+    calcu z2(lemgth, b);
     z2.calc();
     z2.print();
     return 0;
