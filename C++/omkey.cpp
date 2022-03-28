@@ -194,7 +194,6 @@ int main()
                         o1o[i].display();
                         cout << endl;
                     }
-                    getch();
                     break;
                 case 3:
                     goto start;
