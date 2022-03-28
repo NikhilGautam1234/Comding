@@ -3,8 +3,8 @@ using namespace std;
 class proffesion
 {
 protected:
-    int code;
-    char name[20];
+    int code=0;
+    char name[20]="Null";
 
 public:
     void inp(void)
@@ -57,7 +57,7 @@ public:
     void display(void)
     {
         oup();
-        cout << "\nGRADE     :-" << grade;
+        cout << "\nGRADE :-" << grade;
     }
 };
 
@@ -99,22 +99,18 @@ public:
 
 int main()
 {
-    teacher o1t[10];
-    omk o1c[10];
-    officer o1o[10];
+    teacher T[10];
+    omk C[10];
+    officer O[10];
     int choice, i;
     char test;
     while (1)
     {
         int count;
-    start:
+    again:
 
         cout << "\n=====EDUCATION INSTITUTION DATABASE=====\n\n\n";
-        cout << "Choose Category of Information\n";
-        cout << "1)  Teachers\n";
-        cout << "2)  Officer\n";
-        cout << "3)  Typist\n";
-        cout << "4)  Exit\n";
+        cout << "Choose Category of Information\n1)  Teachers\n2)  Officer\n3)  Typist\n4)  Exit\n";
         cout << "Enter your choice:-";
         cin >> choice;
         switch (choice)
@@ -135,30 +131,25 @@ int main()
                     for (count = 0, i = 0; i < 10; i++)
                     {
                         cout << endl;
-                        o1t[i].create();
+                        T[i].create();
                         count++;
-                        cout << endl;
-                        cout << "\n\nAre you Interested in entering data\n";
-                        cout << "Enter y or n:-";
+                        cout << "\n\n\nAre you Interested in entering more data\nEnter y or n:-";
                         cin >> test;
-                        if (test == 'y' || test == 'Y')
-                            continue;
-                        else
-                            goto out1;
+                        if (test == 'y' || test == 'Y') continue;
+                        else goto out;
                     }
-                out1:
+                out:
                     break;
                 case 2:
                     for (i = 0; i < count; i++)
                     {
                         cout << endl;
-                        o1t[i].display();
+                        T[i].display();
                         cout << endl;
                     }
-                    getch();
                     break;
                 case 3:
-                    goto start;
+                    goto again;
                 default:
                     cout << "\nEnter choice is invalid\ntry again\n\n";
                 }
@@ -166,7 +157,12 @@ int main()
         case 2:
             while (1)
             {
-                cout << "\n=====OFFICERS INFORMATION=====\n\n"<< "\nChoose your choice\n"<< "1) Create\n"<< "2) Display\n"<< "3) Jump to Main Menu\n"<< "Enter your choice:-";
+                cout << "\n=====OFFICERS INFORMATION=====\n\n"
+                     << "\nChoose your choice\n"
+                     << "1) Create\n"
+                     << "2) Display\n"
+                     << "3) Jump to Main Menu\n"
+                     << "Enter your choice:-";
                 cin >> choice;
                 switch (choice)
                 {
@@ -174,7 +170,7 @@ int main()
                     for (count = 0, i = 0; i < 10; i++)
                     {
                         cout << endl;
-                        o1o[i].create();
+                        O[i].create();
                         count++;
                         cout << endl;
                         cout << "\n\nAre you Interested in entering data\n";
@@ -191,12 +187,12 @@ int main()
                     for (i = 0; i < count; i++)
                     {
                         cout << endl;
-                        o1o[i].display();
+                        O[i].display();
                         cout << endl;
                     }
                     break;
                 case 3:
-                    goto start;
+                    goto again;
                 default:
                     cout << "\nInvalid choice\ntry again\n\n";
                 }
@@ -217,7 +213,7 @@ int main()
                     for (count = 0, i = 0; i < 10; i++)
                     {
                         cout << endl;
-                        o1c[i].create();
+                        C[i].create();
                         count++;
                         cout << endl;
                         cout << "\n\nAre you Interested in entering data\n";
@@ -234,13 +230,12 @@ int main()
                     for (i = 0; i < count; i++)
                     {
                         cout << endl;
-                        o1c[i].display();
+                        C[i].display();
                         cout << endl;
                     }
-                    getch();
                     break;
                 case 3:
-                    goto start;
+                    goto again;
                 default:
                     cout << "\nInvalid choice\ntry again\n\n";
                 }
