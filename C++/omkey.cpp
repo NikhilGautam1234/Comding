@@ -3,21 +3,21 @@ using namespace std;
 class proffesion
 {
 protected:
-    int code=0;
-    char name[20]="Null";
+    int code = 0;
+    char name[20] = "Null";
 
 public:
     void inp(void)
     {
-        cout << "\n\nEnter code :-";
+        cout << "\n\nEnter code: ";
         cin >> code;
-        cout << "Enter name :-";
+        cout << "Enter name: ";
         cin >> name;
     }
     void oup(void)
     {
-        cout << "\nNAME:" << name;
-        cout << "\nCODE:" << code;
+        cout << "\nNAME: " << name;
+        cout << "\nCODE: " << code;
     }
 };
 
@@ -30,16 +30,16 @@ public:
     void create(void)
     {
         inp();
-        cout << "Enter Subject :-";
+        cout << "Enter Subject: ";
         cin >> subj;
-        cout << "Enter Publication :-";
+        cout << "Enter Publication: ";
         cin >> pub;
     }
     void display(void)
     {
         oup();
-        cout << "\nSUBJECT   :-" << subj;
-        cout << "\nPUBLICATION:-" << pub;
+        cout << "\nSUBJECT: " << subj;
+        cout << "\nPUBLICATION: " << pub;
     }
 };
 
@@ -51,13 +51,13 @@ public:
     void create(void)
     {
         inp();
-        cout << "Enter Grade :-";
+        cout << "Enter Grade: ";
         cin >> grade;
     }
     void display(void)
     {
         oup();
-        cout << "\nGRADE :-" << grade;
+        cout << "\nGRADE: " << grade;
     }
 };
 
@@ -69,13 +69,13 @@ public:
     void typi(void)
     {
         inp();
-        cout << "Enter speed (wpm):-";
+        cout << "Enter speed (wpm): ";
         cin >> speed;
     }
     void outpi(void)
     {
         oup();
-        cout << "\nSPEED:-" << speed;
+        cout << "\nSPEED: " << speed;
     }
 };
 
@@ -87,13 +87,13 @@ public:
     void create(void)
     {
         typi();
-        cout << "Enter Daily Wages :-";
+        cout << "Enter Daily Wages : ";
         cin >> wamge;
     }
     void display(void)
     {
         outpi();
-        cout << "\nDAILY WAGES:-" << wamge;
+        cout << "\nDAILY WAGES: " << wamge;
     }
 };
 
@@ -109,21 +109,16 @@ int main()
         int count;
     again:
 
-        cout << "\n=====EDUCATION INSTITUTION DATABASE=====\n\n\n";
+        cout << "\n*******EDUCATION INSTITUTION DATABASE*******\n\n\n";
         cout << "Choose Category of Information\n1)  Teachers\n2)  Officer\n3)  Typist\n4)  Exit\n";
-        cout << "Enter your choice:-";
+        cout << "Enter your choice: ";
         cin >> choice;
         switch (choice)
         {
         case 1:
             while (1)
             {
-                cout << "\n=====TEACHERS INFORMATION=====\n\n";
-                cout << "\nChoose your choice\n";
-                cout << "1) Create\n";
-                cout << "2) Display\n";
-                cout << "3) Jump to Main Menu\n";
-                cout << "Enter your choice:-";
+                cout << "\n-------TEACHERS INFORMATION-------\n\n\nChoose your choice\n1) Create\n2) Display\n3) Jump to Main Menu\nEnter your choice:-";
                 cin >> choice;
                 switch (choice)
                 {
@@ -135,8 +130,10 @@ int main()
                         count++;
                         cout << "\n\n\nAre you Interested in entering more data\nEnter y or n:-";
                         cin >> test;
-                        if (test == 'y' || test == 'Y') continue;
-                        else goto out;
+                        if (test == 'y' || test == 'Y')
+                            continue;
+                        else
+                            goto out;
                     }
                 out:
                     break;
@@ -157,12 +154,7 @@ int main()
         case 2:
             while (1)
             {
-                cout << "\n=====OFFICERS INFORMATION=====\n\n"
-                     << "\nChoose your choice\n"
-                     << "1) Create\n"
-                     << "2) Display\n"
-                     << "3) Jump to Main Menu\n"
-                     << "Enter your choice:-";
+                cout << "\n-------OFFICERS INFORMATION-------\n\n\nChoose your choice\n1) Create\n2) Display\n3) Jump to Main Menu\nEnter your choice:-";
                 cin >> choice;
                 switch (choice)
                 {
@@ -172,9 +164,7 @@ int main()
                         cout << endl;
                         O[i].create();
                         count++;
-                        cout << endl;
-                        cout << "\n\nAre you Interested in entering data\n";
-                        cout << "Enter y or n:-";
+                        cout << "\n\n\nAre you Interested in entering data\nEnter y or n:-";
                         cin >> test;
                         if (test == 'y' || test == 'Y')
                             continue;
@@ -200,12 +190,7 @@ int main()
         case 3:
             while (1)
             {
-                cout << "\n=====TYPIST INFORMATION=====\n\n";
-                cout << "\nChoose your choice\n";
-                cout << "1) Create\n";
-                cout << "2) Display\n";
-                cout << "3) Jump to Main Menu\n";
-                cout << "Enter your choice:-";
+                cout << "\n-------TYPIST INFORMATION-------\n\n\nChoose your choice\n1) Create\n2) Display\n3) Jump to Main Menu\nEnter your choice:-";
                 cin >> choice;
                 switch (choice)
                 {
@@ -215,9 +200,7 @@ int main()
                         cout << endl;
                         C[i].create();
                         count++;
-                        cout << endl;
-                        cout << "\n\nAre you Interested in entering data\n";
-                        cout << "Enter y or n:-";
+                        cout << "\n\n\nAre you Interested in entering data\nEnter y or n:-";
                         cin >> test;
                         if (test == 'y' || test == 'Y')
                             continue;
