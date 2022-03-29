@@ -110,7 +110,7 @@ int main()
         int count;
     again:
 
-        cout << "\n*******EDUCATION INSTITUTION DATABASE*******\n\n\n";
+        cout << "\n******EDUCATION INSTITUTION DATABASE******\n\n\n";
         cout << "Choose Category of Information\n1)  Teachers\n2)  Officer\n3)  Typist\n4)  Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
