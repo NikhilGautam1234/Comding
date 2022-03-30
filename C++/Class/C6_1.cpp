@@ -29,7 +29,7 @@ int main(void)
     int c;
     while (1)
     {
-        cout << "------CALCULATE AREA------\n\n\t1. Square\n\t2. Rectangle\n\t3. Triangle\n\t4. Exit\nEnter Your choice: ";
+        cout << " ------CALCULATE AREA------\n\t1. Square\n\t2. Rectangle\n\t3. Triangle\n\t4. Exit\nEnter Your choice: ";
         cin >> c;
         switch (c)
         {
