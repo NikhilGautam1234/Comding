@@ -3,11 +3,9 @@ using namespace std;
 class area
 {
     float s;
-
 public:
     inline int calc(int a)
     {
-        cout << "\n\tdv\n";
         return a * a;
     }
     inline float calc(float a)
@@ -39,7 +37,8 @@ int main(void)
             float s;
             cout << "\nEnter the side: ";
             cin >> s;
-            cout << "Area of square is: " << side.calc(s) << "\n\n";
+            if((int)s==s) cout << "Area of square is: " << side.calc((int)s) << "\n\n";
+            else  cout << "Area of square is: " << side.calc(s) << "\n\n";
             break;
 
         case 2:
