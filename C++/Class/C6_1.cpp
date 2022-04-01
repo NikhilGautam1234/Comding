@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define PI 3.14
 class area
 {
     float s;
@@ -21,6 +22,9 @@ public:
         s = (x + y + z) / 2;
         return sqrt(s * (s - x) * (s - y) * (s - z));
     }
+    float calc(float r,char c){
+        return PI*r*r;
+    }
 };
 
 int main(void)
@@ -29,7 +33,7 @@ int main(void)
     int c;
     while (1)
     {
-        cout << " ------CALCULATE AREA------\n\t1. Square\n\t2. Rectangle\n\t3. Triangle\n\t4. Exit\nEnter Your choice: ";
+        cout << " ------CALCULATE AREA------\n\t1. Square\n\t2. Rectangle\n\t3. Triangle\n\t4. Circle\n\t5. Exit\nEnter Your choice: ";
         cin >> c;
         switch (c)
         {
@@ -55,7 +59,22 @@ int main(void)
             cout << "Area of triangle is: " << side.calc(a, b, c) << "\n\n";
             break;
 
+        case 3:
+            float a, b, c;
+            cout << "\nEnter the sides: ";
+            cin >> a >> b >> c;
+            cout << "Area of triangle is: " << side.calc(a, b, c) << "\n\n";
+            break;
+        
         case 4:
+            float r;
+            char c='r';
+            cout<<"\nEnter the radius: ";
+            cin>>r;
+            cout<<"Area of circle is: "<< side.calc(r,c)<<"\n\n";
+            break;
+
+        case 5:
             goto end;
         
         default:
