@@ -11,6 +11,7 @@ float cube(float x){
 int main(void){
     int i;
     float f;
+    cout<<"Nikhil\n21BCS9434\n";
     cout<<"Enter integer type input: ";
     cin>>i;
     cout<<"Enter float type input: ";

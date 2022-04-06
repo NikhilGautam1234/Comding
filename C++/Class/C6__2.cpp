@@ -25,6 +25,7 @@ public:
 };
 
 int main(void){
+    cout<<"Nikhil\n21BCS9434\n";
     temst a(11),b(11),c;
     ++a;
     a.display();

@@ -1,33 +1,38 @@
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
 using namespace std;
 
-int main(void)
-{
-    int tt;    
-    cin >> tt;
-
-    while (tt--)
-    {
-        int n;
-        cin >> n;
-
-        int i,j;
-        int count=0;
-
-        for(j=1;j<=9;j++)
-        {
-            long long t=j;
-            for(i=0;i<=9;i++)
-            {
-                if(t<=n) count++;
-
-                t = (t*10)+j;
-            }
-
-            cout << endl;
-        }
-
-        cout << count << endl;
-
+class temst{
+    int zoro;
+public:
+    temst(){
+        zoro=0;
     }
+    temst(int x){
+        zoro=x;
+    }
+    temst operator ++(){
+        ++zoro;
+        return temst(zoro);
+    }
+    temst operator ++(int){
+        temst t(zoro);
+        ++zoro;
+        return t;
+    }
+    void display(){
+        cout<<"Number: "<<zoro<<endl;
+    }
+};
+
+int main(void){
+    cout<<"Nikhil\n21BCS9434\n";
+    temst a(11),b(11),c;
+    ++a;
+    a.display();
+    b++;
+    b.display();
+    c.display();
+    c=b++;
+    b.display();
+    c.display();
 }
