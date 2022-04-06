@@ -1,6 +1,6 @@
 #include "bits/stdc++.h"
-#define maxrow 50
-#define maxcol 50
+#define maxrow 100
+#define maxcol 100
 using namespace std;
 
 class Matrix
@@ -33,8 +33,7 @@ public:
     }
     Matrix operator+(Matrix x)
     {
-        if (x.rows != rows || x.cols != cols || (rows == 0 && cols == 0))
-            Matrix();
+        if (x.rows != rows || x.cols != cols || (rows == 0 && cols == 0)) Matrix();
         int mat[maxrow][maxcol];
         for (int i = 0; i < rows; i++)
             for (int j = 0; j < cols; j++)
@@ -43,43 +42,37 @@ public:
     }
     int operator==(Matrix x)
     {
-        if (x.rows != rows || x.cols != cols)
-        {
-            return 0;
-        }
+        if (x.rows != rows || x.cols != cols) return 0;
         for (int i = 0; i < rows; i++)
-        {
             for (int j = 0; j < cols; j++)
-            {
-                if (a[i][j] != x.a[i][j])
-                {
-                    return 0;
-                }
-            }
-        }
+                if (a[i][j] != x.a[i][j]) return 0;
         return 1;
     }
 };
 int main()
 {
     int a[maxrow][maxcol], a2[maxrow][maxcol];
-    int r,c;
+    int r,c,r2,c2;
     cout << "\tNikhil\n\t21BCS9434\n";
-    cout<<"Enter the number of rows: ";
+    cout<<"Enter the number of rows for 1st matrix: ";
     cin>>r;
-    cout<<"Enter the number of coloumns: ";
+    cout<<"Enter the number of coloumns for 1st matrix: ";
     cin>>c;
     cout<<"Enter the first array: \n";
     for (int i = 0; i < r; i++)
         for (int j = 0; j < c; j++)
             cin >> a[i][j];
+    cout<<"Enter the number of rows for 2nd matrix: ";
+    cin>>r2;
+    cout<<"Enter the number of coloumns for 2nd matrix: ";
+    cin>>c2;
     cout<<"Enter the second array: \n";
-    for (int i = 0; i < r; i++)
-        for (int j = 0; j < c; j++)
+    for (int i = 0; i < r2; i++)
+        for (int j = 0; j < c2; j++)
             cin >> a2[i][j];
     Matrix mat1(r, c, a);
     Matrix mat2(r, c, a);
-    Matrix mat3(r, c, a2);
+    Matrix mat3(r2, c2, a2);
     Matrix mat4;
     cout << "Elements of Matrix 1:" << endl;
     mat1.display();
