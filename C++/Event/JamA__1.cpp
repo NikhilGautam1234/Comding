@@ -8,11 +8,10 @@ int main(void){
     while(t--){
         string a,mim,temp,temst,m;
         cin>>a;
-        int n = a.length(),x=0,b=n,j;
+        int n = a.length(),x=0,b=n,j=0;
         temp=a;m=a;
         temst=a;
-        while(a<=m&&b--){
-            m=a;
+        while(b--){
             mim[0]=temst[0];
             x=0;
             for (int i = 0; i < n; i++)
@@ -22,11 +21,13 @@ int main(void){
                     x=i;
                 }
             }
+            if(a<m) m=a;
+            else a=m;
             if(x<=j) j=x;
             else j=x+1;
             temst[x]='Z';
             a.insert(a.begin()+j,temp.begin()+x,temp.end()-(n-x-1));
-            cout<<" -"<<a<<" -"<<temst<<" "<<x<<endl;
+            cout<<" -"<<a<<" -"<<temst<<" "<<j<<" "<<x<<endl;
         }
         cout<<"Case #"<<ppp<<": "<<m<<endl;
         ppp++;
