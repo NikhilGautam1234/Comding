@@ -26,7 +26,12 @@ public:
 
 int main(void){
     cout<<"Nikhil\n21BCS9434\n";
-    temst a(11),b(11),c;
+    int x,y;
+    cout<<"Enter the value for a: ";
+    cin>>x;
+    cout<<"Enter the value for b: ";
+    cin>>y;
+    temst a(x),b(y),c;
     ++a;
     a.display();
     b++;

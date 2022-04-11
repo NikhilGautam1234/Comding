@@ -6,13 +6,13 @@ class pairms
     char zoro[50];
 
 public:
-    friend ostream &operator<<(ostream &output, pairms& enma)
+    friend ostream &operator<<(ostream &output, pairms &enma)
     {
         output << enma.zoro;
         return output;
     }
 
-    friend istream &operator>>(istream &input, pairms& shushui)
+    friend istream &operator>>(istream &input, pairms &shushui)
     {
         char ichimonji[50];
         input >> ichimonji;
