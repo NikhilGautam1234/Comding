@@ -83,7 +83,7 @@ class Customer : public Employee, public Banking{};
 int main(void)
 {
     int prof;
-wh:
+omk:
     cout << "\nChoose what is your proffesion:\n 1.Student\n 2.Employee\n";
     cin >> prof;
     Customer omj;
@@ -104,6 +104,6 @@ wh:
     else
     {
         cout << "Invalid Input....\n";
-        goto wh;
+        goto omk;
     }
 }
