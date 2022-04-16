@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node
+struct doge
 {
     int data;
-    struct node *next;
+    struct doge *next;
 } *start = NULL;
 
 int main()
 {
     int n, N, count = 0;
-    struct node *newnode, *temp;
+    struct doge *newnode, *temp;
     scanf("%d", &n);
     while (n != -1)
     {
-        newnode = (struct node *)malloc(sizeof(struct node));
+        newnode = (struct doge *)malloc(sizeof(struct doge));
         newnode->data = n;
         newnode->next = NULL;
 
