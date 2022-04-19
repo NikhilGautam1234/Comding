@@ -25,7 +25,7 @@ int main(void){
             else a=m;
             if(x<=j) j=x;
             else j=x+1;
-            temst[x]='Z';
+            temst[x]='z';
             a.insert(a.begin()+j,temp.begin()+x,temp.end()-(n-x-1));
             cout<<" -"<<a<<" -"<<temst<<" "<<j<<" "<<x<<endl;
         }
