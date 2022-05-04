@@ -1,38 +1,39 @@
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
 using namespace std;
 
-class luffy{
-    int a,b,c;
-    string robin={"<3"};
-    public:
-    luffy(){
-        cout<<"\n"<<robin<<endl;
-        cout<<"Enter the values: ";
+class pairms
+{
+    char zoro[50];
+
+public:
+    friend ostream &operator<<(ostream &output, pairms& enma)
+    {
+        output << enma.zoro;
+        return output;
     }
-    luffy(int x,int y,int z){
-        a=x;
-        b=y;
-        c=z;
-    }
-    long calc();
-    void show(){
-        cout<<"The volume of cuboid is: "<<calc()<<"\n\n";
-    }
-    ~luffy(){
-        cout<<"Destroying the constructor :(\n";
+
+    friend istream &operator>>(istream &input, pairms& shushui)
+    {
+        char ichimonji[50];
+        input >> ichimonji;
+        int kitetsu = strlen(ichimonji);
+        if (kitetsu < 5 || ichimonji[0] != '(' || ichimonji[kitetsu - 1] != ')' || !strstr(ichimonji, ","))
+        {
+            cout << "Invalid Pair Value...\n";
+            strcpy(ichimonji, "");
+        }
+        else
+        {
+            strcpy(shushui.zoro, ichimonji);
+        }
+        return input;
     }
 };
 
-long luffy :: calc(){
-    long volume =a*b*c;
-    return volume;
-}
-
 int main(void)
 {
-    int x,y,z;
-    luffy sanji;
-    cin>>x>>y>>z;
-    luffy zoro(x,y,z);
-    zoro.show();
+    pairms sanji;
+    cout << "Enter the value of pair object: ";
+    cin >> sanji;
+    cout << "Entered pair value is: " << sanji << endl;
 }

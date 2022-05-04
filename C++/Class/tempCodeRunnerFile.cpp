@@ -1,7 +1,20 @@
-try{
-        //     if(x<5) throw x;
-        // }
-        // catch(int e){
-        //     cout<<"Error detected!!!\n !One or more Real part is less than 5!\nExiting the comde...";
-        //     return ;
-        // }
+#include "bits/stdc++.h"
+using namespace std;
+class mewcomstruct
+{
+public:
+    mewcomstruct()
+    {
+        cout << "Constructor Used" << endl;
+    }
+    ~mewcomstruct()
+    {
+        cout << "Destructor Used" << endl;
+    }
+};
+int main()
+{
+    cout << "Name: Nikhil\nUID: 21BCS9434\n";
+    mewcomstruct *Sanji = new mewcomstruct[4];
+    delete[] Sanji;
+}
