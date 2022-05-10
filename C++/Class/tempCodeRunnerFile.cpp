@@ -1,20 +1,4 @@
-#include "bits/stdc++.h"
-using namespace std;
-class mewcomstruct
-{
-public:
-    mewcomstruct()
-    {
-        cout << "Constructor Used" << endl;
+for(int i=0;i<lem;i++){
+        boa.put(mane[i]);
+        boa<<"\n";
     }
-    ~mewcomstruct()
-    {
-        cout << "Destructor Used" << endl;
-    }
-};
-int main()
-{
-    cout << "Name: Nikhil\nUID: 21BCS9434\n";
-    mewcomstruct *Sanji = new mewcomstruct[4];
-    delete[] Sanji;
-}

@@ -1,49 +1,19 @@
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
 using namespace std;
-class calcu
-{
-    int lemgth, b, a;
 
-public:
-    calcu()
-    {
-        lemgth = 10;
-        b = 27;
-        cout << "Name: NIKHIL\nUID: 21BCS9434\n";
-        cout << "Length = " << lemgth << "\n";
-        cout << "Breadth = " << b << "\n";
+int main(void){
+    int tt;cin>>tt;
+    while(tt--){
+        int sum=0,n,i=1;
+        cin>>n;
+        while (n>0)
+        {
+            int last=n%10;
+            if(last==0) last=5;
+            sum+=(last*i);
+            i*=10;
+            n/=10;
+        }
+        cout<<sum<<endl;
     }
-    calcu(int x, int y)
-    {
-        lemgth = x;
-        b = y;
-    }
-    void calc();
-    void print();
-    ~calcu();
-};
-void calcu::calc()
-{
-    a = lemgth * b;
-}
-void calcu::print()
-{
-    cout << "Area = " << a << "\n";
-}
-calcu::~calcu()
-{
-    cout << "Object is being deleted\n";
-}
-int main()
-{
-    int lemgth, b;
-    calcu f;
-    f.calc();
-    f.print();
-    cout << "Enter the length and breadth for constructor:\n";
-    cin >> lemgth >> b;
-    calcu z2(lemgth, b);
-    z2.calc();
-    z2.print();
-    return 0;
 }
