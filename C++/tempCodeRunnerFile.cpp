@@ -1,12 +1,9 @@
-#include <stdio.h>
+A.set(0,0,1.0);
+    // A.set(0,1,2.0);
+    // A.set(1,0,3.0);
+    // A.set(1,1,4.0);
 
-int main(void){
-    int a[]={11,22,36,5,2};
-    int sum=0,*p;
-
-    for (p = &a[0]; p <= &a[4]; p++)
-    {
-        sum+= *p;
-    }
-    printf("%d",sum);
-}
+    // B.set(0,0,10.0);
+    // B.set(0,1,20.0);
+    // B.set(1,0,30.0);
+    // B.set(1,1,40.0);

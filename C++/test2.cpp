@@ -46,25 +46,38 @@
 //     return 0;
 // }
 
+// #include "bits/stdc++.h"
+// using namespace std;
+
+// class luffy{
+//     int code;
+//     string name;
+//     public:
+//     void inp(){
+//         cout<<"Enter your name: ";
+//         cin>>name;
+//         cout<<"Enter the code: ";
+//         cin>>code;
+//     }
+//     void oup(){
+//         cout<<"Name: "<<name<<"\nCode: "<<code<<endl;
+//     }
+// };
+
+
+// int main(void){
+//     cout<<
+// }
+
 #include "bits/stdc++.h"
 using namespace std;
 
-class luffy{
-    int code;
-    string name;
-    public:
-    void inp(){
-        cout<<"Enter your name: ";
-        cin>>name;
-        cout<<"Enter the code: ";
-        cin>>code;
-    }
-    void oup(){
-        cout<<"Name: "<<name<<"\nCode: "<<code<<endl;
-    }
-};
-
-
 int main(void){
-    cout<<
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    
 }
