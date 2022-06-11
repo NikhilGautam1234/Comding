@@ -2,8 +2,8 @@
 using namespace std;
 
 int main(void){
-    int tt;cin>>tt;
-    while(tt--){
+    int t;cin>>t;
+    while(t--){
         int sum=0,n,i=1;
         cin>>n;
         while (n>0)
