@@ -8,9 +8,7 @@ int main()
 
     while(tt--)
     {
-        string a;
-        cin >> a;
-
+        int n;cin>>n;
         
     }
 }
