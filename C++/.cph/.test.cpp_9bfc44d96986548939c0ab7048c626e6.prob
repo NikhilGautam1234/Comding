@@ -1,1 +1,1 @@
-{"name":"Local: test","url":"e:\\Code\\Comding\\C++\\test.cpp","tests":[],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Code\\Comding\\C++\\test.cpp","group":"local","local":true}
+{"name":"Local: test","url":"e:\\Code\\Comding\\C++\\test.cpp","tests":[{"id":1655134074948,"input":"6\n3 7\n4 12\n2 1000000000\n7 97\n1000000000 1000000000\n2 1","output":"10\n15\n1999999999\n113\n1000000001\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Code\\Comding\\C++\\test.cpp","group":"local","local":true}
