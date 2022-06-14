@@ -5,17 +5,20 @@ int main()
 {
     int n;
     cin>>n;
-    long long a[n],m=0;
-    for(int i=0;i<n;i++){
-        cin>>a[i];
-        if(i!=0){
-            if(a[i-1]>a[i]){
-                m+=a[i-1]-a[i];
-                a[i]+=a[i-1]-a[i];
-                // cout<<" `"<<m<<endl;
-            }
+    int a=n,b=n/2;
+    if(n==2||n==3){
+        cout<<"NO SOLUTION\n";
+        return 0;
+    }     
+    for(int i=0+(n%2==0);i<n+(n%2==0);i++){
+        if(i%2){
+            cout<<b<<" ";
+            b--;
+        }
+        else{
+            cout<<a<<" ";
+            a--;
         }
     }
-    cout<<m<<"\n";
     return 0;
 }
