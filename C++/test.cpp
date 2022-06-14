@@ -2,11 +2,14 @@
 using namespace std;
 
 int main(void){
-    int t;cin>>t;
-    while(t--){
-        long long n,k,x=0;
-        cin>>n>>k;
-        cout<<((n*k)/(n-1)-((n*k)%(n-1)==0))<<"\n";
+    int tt;cin>>tt;
+    while(tt--){
+        int a,b,c,d,aage=0;
+        cin>>a>>b>>c>>d;
+        if(b>a) aage++;
+        if(c>a) aage++;
+        if(d>a) aage++;
+        cout<<aage<<"\n";
     }
     return 0;
 }
