@@ -3,17 +3,19 @@ using namespace std;
 
 int main()
 {
-    string dna;
-    cin>>dna;
-    int p=0,x=0;
-    for(int i=1;i<dna.length();i++){
-        while(dna[i-1]==dna[i]){
-            p++;
-            if(p>x) x=p;
-            i++;
-        }   
-        p=0;
+    int n;
+    cin>>n;
+    long long a[n],m=0;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+        if(i!=0){
+            if(a[i-1]>a[i]){
+                m+=a[i-1]-a[i];
+                a[i]+=a[i-1]-a[i];
+                // cout<<" `"<<m<<endl;
+            }
+        }
     }
-    cout<<x+1<<"\n";
+    cout<<m<<"\n";
     return 0;
 }
