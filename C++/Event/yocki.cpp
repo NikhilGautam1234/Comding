@@ -3,18 +3,17 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin>>n;
-    int a[n];
-    for(int i=0;i<n-1;i++){
-        cin>>a[i];
+    string dna;
+    cin>>dna;
+    int p=0,x=0;
+    for(int i=1;i<dna.length();i++){
+        while(dna[i-1]==dna[i]){
+            p++;
+            if(p>x) x=p;
+            i++;
+        }   
+        p=0;
     }
-    sort(a,a+(n-1));
-    for(int i=1;i<=n;i++){
-        if(a[i-1]!=i){
-            cout<<i<<"\n";
-            break;
-        }
-    }
+    cout<<x+1<<"\n";
     return 0;
 }
