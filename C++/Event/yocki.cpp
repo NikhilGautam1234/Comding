@@ -3,37 +3,18 @@ using namespace std;
 
 int main()
 {
-    string pal,str;
-    cin>>pal;
-    str=pal;
-    char x=' ';
-    int n=pal.length(),count=0,j=1;
-    sort(pal.begin(),pal.end());
-    x=pal[n-1];
-    for(int i=1;i<n;i++){
-        if(pal[i-1]==pal[i]){
-            str[j-1]=pal[i-1];
-            str[n-j]=pal[i];
-            if(i+2<n) i++;
-            j++;
-        }else
-        {
-            if (n%2){
-                count++;
-                if(i+2>n) x=pal[i];
-                else x=pal[i-1];
-            }
-            else{
-                cout<<"NO SOLUTION\n";
-                return 0;
-            }
-            if(count>1){
-                cout<<"NO SOLUTION\n";
-                return 0;
-            }
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    sort(a,a+n);
+    for(int i=1;i<=n;i++){
+        if(a[i-1]!=i){
+            cout<<i;
+            break;
         }
     }
-    if((n%2)&&(n>1)) str[ceil(n/2)]=x;
-    cout<<str<<"\n";
     return 0;
 }
