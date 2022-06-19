@@ -2,18 +2,17 @@
 using namespace std;
 
 int main(void){
-    int tt;cin>>tt;
-    while(tt--){
-        long long n;cin>>n;
-        if((n%2)!=0||n<4) cout<<-1<<"\n";
-        else
-        {
-            long long maxi=1,mini=1;
-            if(n>=6) mini=n/6;
-            maxi=n/4;
-            if((n%6!=0)&&(n>=6)) mini++;
-            cout<<mini<<" "<<maxi<<"\n";
-        }
+    string s;
+    cin>>s;
+    int u=0,l=0;
+    for(int i=0;i<s.length();i++){
+        if(isupper(s[i])) u++;
+        else l++;
     }
+    for(int i=0;i<s.length();i++){
+        if((u>l)&&isupper(s[i])==0) s[i]-=32;
+        else if((u<=l)&&isupper(s[i])!=0) s[i]+=32;
+    }
+    cout<<s<<"\n";
     return 0;
 }
