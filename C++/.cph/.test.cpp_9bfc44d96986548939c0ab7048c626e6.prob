@@ -1,1 +1,1 @@
-{"name":"Local: test","url":"e:\\Code\\Comding\\C++\\test.cpp","tests":[{"id":1655629484857,"input":"7\n1 1\n2 3\n3 2\n7 1\n1 10\n5 5\n10000 10000","output":"1\n12\n13\n28\n55\n85\n500099995000"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Code\\Comding\\C++\\test.cpp","group":"local","local":true}
+{"name":"Local: test","url":"e:\\Code\\Comding\\C++\\test.cpp","tests":[{"id":1655651877351,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Code\\Comding\\C++\\test.cpp","group":"local","local":true}

@@ -1,18 +1,55 @@
-#include "bits/stdc++.h"
+#include <iostream>
 using namespace std;
-
-int main(void){
-    string s;
-    cin>>s;
-    int u=0,l=0;
-    for(int i=0;i<s.length();i++){
-        if(isupper(s[i])) u++;
-        else l++;
+void sorttwoarrays(int arr1[], int arr2[], int arrM[], int totalsize, int size1, int size2)
+{
+    cout<<"fn\n";
+    int i = 0, k = 0, j = 0;
+    while (i < size1 && j < size2)
+    {
+        if (arr1[i] <= arr2[j])
+        {
+            arrM[k] = arr1[i];
+            i++;
+            k++;
+            cout<<"less"<<endl;
+        }
+        else if (arr1[i] > arr2[j])
+        {
+            arrM[k] = arr2[j];
+            j++;
+            k++;
+            cout<<"more"<<endl;
+        }
+        cout<<"lomp"<<endl;
     }
-    for(int i=0;i<s.length();i++){
-        if((u>l)&&isupper(s[i])==0) s[i]-=32;
-        else if((u<=l)&&isupper(s[i])!=0) s[i]+=32;
+    while (i < size1)
+    {
+        arrM[k] = arr1[i];
+        i++;
+        cout<<1<<endl;
     }
-    cout<<s<<"\n";
+    while (j < size2)
+    {
+        arrM[k] = arr2[j];
+        cout<<11<<endl;
+    }
+}
+void printarray(int arrM[], int totalsize)
+{
+    for (int i = 0; i < totalsize; i++)
+    {
+        cout << arrM[i] << " ";
+    }
+}
+int main()
+{
+    int arr1[5] = {1, 12, 20, 21, 23};
+ 
+    int arr2[4] = {5, 9, 12, 16};
+    
+   
+    int arrM[9] = {0};
+    sorttwoarrays(arr1, arr2, arrM, 9, 5, 4);
+    printarray(arrM, 9);
     return 0;
 }
