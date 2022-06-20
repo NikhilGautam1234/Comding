@@ -46,7 +46,17 @@ void setDemo()
 
         //remove an element 
     s.erase(23); //the element 23 will get removed from set... if 23 does not exist in set it will remain unaffected
-        
+
+        //remove an element from certain index
+    int ind;cin>>ind;
+    int i=0,p;
+    for(auto x:s){
+        if(i==ind) p=x;
+        i++;
+    }
+    cout<<p<<"\n";
+    s.erase(p);
+
 }
 
 int main(void){
