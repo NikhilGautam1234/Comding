@@ -16,6 +16,7 @@ int main(void){
             else{
                 if(a>b) cout<<d;
                 else cout<<s;
+                
             }
         }
         cout<<"\n";
