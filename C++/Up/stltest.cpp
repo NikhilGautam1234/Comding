@@ -43,7 +43,10 @@ void setDemo()
         //get strictly grater than a certain number
     auto it3 = s.upper_bound(23);
     cout<< *it3 <<"\n";
-    
+
+        //remove an element 
+    s.erase(23); //the element 23 will get removed from set... if 23 does not exist in set it will remain unaffected
+        
 }
 
 int main(void){
