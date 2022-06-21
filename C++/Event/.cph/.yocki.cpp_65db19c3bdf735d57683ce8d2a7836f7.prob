@@ -1,1 +1,1 @@
-{"name":"Local: yocki","url":"e:\\Code\\Comding\\C++\\Event\\yocki.cpp","tests":[{"id":1655644805157,"input":"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Code\\Comding\\C++\\Event\\yocki.cpp","group":"local","local":true}
+{"name":"Local: yocki","url":"e:\\Code\\Comding\\C++\\Event\\yocki.cpp","tests":[{"id":1655644805157,"input":"2\n1 2 3\n12 34 56","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Code\\Comding\\C++\\Event\\yocki.cpp","group":"local","local":true}
