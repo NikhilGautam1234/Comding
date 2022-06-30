@@ -1,26 +1,85 @@
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
 using namespace std;
+int counter = -1;
+int odd = 0;
+
+void deviderr(int arr[],int m);
+void evenmaker(int arr[], int m);
+void oddmaker(int arr[], int m);
 
 int main()
 {
-    test
+    int n;
+    cin >> n;
+    int m = n * 2;
+    int arr[m];
+    for (int i = 0; i < m; i++)
     {
-        int n;
-        cin >> n;
-        int a[n],i,temp[n]={0};
-        for (i = 0; i < n; i++) cin >> a[i];
-        temp[0]++;
-        if (a[0] == 0) temp[1]++;
-        else temp[1] = 2;
-        for (i = 2; i < n; i++)
-        {
-            if ((a[i - 1] == 1 && temp[i - 1] == 1) || (a[i - 1] == 0 && temp[i - 1] == 2))
-                temp[i] = 2;
-            else
-                temp[i] = 1;
-        }
-
-        if ((temp[n - 1] + temp[0]) % 2 == a[n - 1]) cout << "YES" << endl;
-        else cout << "NO" << endl;
+        cin >> arr[i];
     }
+    deviderr(arr, m);
+
+    return 0;
+}
+void deviderr(int arr[], int m)
+{
+    counter++;
+    int even = 0;
+
+    for (int i = 0; i < m; i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            even++;
+        }
+        else
+            odd++;
+    }
+
+    if (even == odd)
+    {
+        cout << counter << endl;
+        return;
+    }
+    if (odd > even)
+    {
+
+        evenmaker(arr, m);
+    }
+    if (even > odd)
+    {
+        oddmaker(arr, m);
+    }
+}
+void evenmaker(int arr[], int m)
+{
+    for (int i = 0; i <= m; i++)
+    {
+        if (arr[i] % 2 != 0)
+        {
+            arr[i] = arr[i] * 2;
+            break;
+        }
+    }
+    deviderr(arr, m);
+}
+void oddmaker(int arr[], int m)
+{
+    int temp = 0;
+    int min = INT_MAX;
+    int holdIndex = -1;
+    for (int i = 0; i < m; i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            if (arr[i] < min)
+            {
+                min = arr[i];
+                holdIndex = i;
+            }
+        }
+    }
+    arr[holdIndex] = arr[holdIndex] / 2;
+    counter++;
+    deviderr(arr, m);
 }

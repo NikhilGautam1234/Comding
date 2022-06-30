@@ -1,1 +1,1 @@
-if(a>=3&&b<3||b>=3&&a<3) break;
+int min = INT_MAX;
