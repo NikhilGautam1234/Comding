@@ -2,16 +2,16 @@
 using namespace std;
 
 int main(void){
-	int n,x;
+	int n,i=0;
 	cin>>n;
-	map<int,int> m;
-	for(int i=0;i<n;i++){
-		cin>>x;
-		m[x]++;
+	int a[n];
+	for(;i<n;i++){
+		cin>>a[i];
 	}
-	cin>>n;
-	for(int i=0;i<n;i++){
-		cin>>x;
-		cout<<m[x]<<"\n";
+	for(int i=0;i<n/2;i++){
+		swap(a[i],a[n-1]);
+	}
+	for (int x: a){
+		cout<<x<<" ";
 	}
 }
