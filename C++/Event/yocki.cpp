@@ -2,22 +2,23 @@
 #define ll long long
 using namespace std;
 
-int main(void){
+int main(){
     int tt;cin>>tt;
     while(tt--){
-        int n,m;
-        cin>>n>>m;
-        ll a[n],sum=0;
+        ll n;
+        cin>>n;
+        ll a[n],doomed=0,bruh=0,zerp=0;
         for(int i=0;i<n;i++){
             cin>>a[i];
+            if(i!=0 && i!=n-1){
+                if(a[i]!=0) bruh=1;
+                else doomed=1;
+            }
+            if(a[i]!=0) zerp++;
         }
-        sort(a,a+n);
-        for(int i=1;i<n;i++){
-            sum+=max(a[i],a[i-1]);
-        }
-        sum+=a[n-1];
-        //cout<<sum<<"\n";
-        if(sum+n <= m) cout<<"YES\n";
-        else cout<<"NO\n";
+        if(doomed && bruh) cout<<2<<"\n";
+        else if(bruh || zerp) cout<<1<<'\n';
+        else cout<<0<<"\n";
     }
+    return 0;
 }
