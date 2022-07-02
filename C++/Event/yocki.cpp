@@ -7,18 +7,23 @@ int main(){
     while(tt--){
         ll n;
         cin>>n;
-        ll a[n],doomed=0,bruh=0,zerp=0;
+        ll a[n],doomed=0,bruh=1,z=1,l=0,r=0,x=1;
         for(int i=0;i<n;i++){
             cin>>a[i];
-            if(i!=0 && i!=n-1){
-                if(a[i]!=0) bruh=1;
-                else doomed=1;
-            }
-            if(a[i]!=0) zerp++;
+            if(a[i]!=0) bruh=0;
         }
-        if(doomed && bruh) cout<<2<<"\n";
-        else if(bruh || zerp) cout<<1<<'\n';
-        else cout<<0<<"\n";
+
+        for(int i=0;i<n;i++){
+            if(a[i]!=0 && x) l=i,x--;
+            if(a[n-i-1]!=0 && z) r=n-i,z--;
+        }
+        //cout<< l <<" \n";
+        for(int i=l;i < r;i++){
+            if(a[i]==0){ doomed = 1;break;}
+        }
+        if(doomed) cout<<2<<"\n";
+        else if(bruh) cout<<0<<'\n';
+        else cout<<1<<"\n";
     }
     return 0;
 }
