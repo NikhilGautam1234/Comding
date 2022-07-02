@@ -2,11 +2,11 @@
 using namespace std;
 
 int main(void){
-	string str;
-	cin>>str;
-	int n = str.length();
-	cout<<n<<"\n";
-	for(int i = 0; i < n/2 ; i++) swap(str[i],str[n-i-1]);
-	for(char p: str) cout<< p;
-	cout<<"\n";
+	vector<int> arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+	int j=0;
+	for(int i = 0; i< arr.size();i++){
+		if(arr[i]<0){
+			 
+		}
+	}
 }
