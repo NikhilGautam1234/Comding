@@ -1,16 +1,15 @@
 #include "bits/stdc++.h"
+#define ll long long
 using namespace std;
 
-int main(void){
-	vector<int> arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
-	int j=0;
-	for(int i = 0; i< arr.size();i++){
-		if(arr[i]<0){
-			if(i!=j)swap(arr[i],arr[j]);
-			j++;
-		}
+int main(){
+	int tt;cin>>tt;
+	int x=0;
+	while(tt--){
+		int a,b,c;
+		cin>>a>>b>>c;
+		if(a+b+c>=2) x++;
 	}
-	for(int i: arr){
-		cout<< i <<" ";
-	}
+	cout<<x;
+	return 0;
 }
