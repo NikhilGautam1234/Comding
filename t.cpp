@@ -6,7 +6,11 @@ int main(void){
 	int j=0;
 	for(int i = 0; i< arr.size();i++){
 		if(arr[i]<0){
-			 
+			if(i!=j)swap(arr[i],arr[j]);
+			j++;
 		}
+	}
+	for(int i: arr){
+		cout<< i <<" ";
 	}
 }
