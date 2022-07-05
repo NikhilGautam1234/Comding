@@ -3,13 +3,15 @@
 using namespace std;
 
 int main(){
-	int tt;cin>>tt;
-	int x=0;
-	while(tt--){
-		int a,b,c;
-		cin>>a>>b>>c;
-		if(a+b+c>=2) x++;
+	int n,m;
+	cin>>n>>m;
+	if(m%n) cout<<-1<<"\n";
+	else{
+		int x=0,p=m/n;
+		while(p%2==0) p/=2,x++;
+		while(p%3==0) p/=3,x++;
+		if(p!=1) cout<<-1<<"\n";
+		else cout<<x<<"\n";
 	}
-	cout<<x;
 	return 0;
 }
