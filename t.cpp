@@ -1,17 +1,42 @@
-#include "bits/stdc++.h"
-#define ll long long
+#include <iostream>
 using namespace std;
 
-int main(){
-	int x,m;
-	cin>>x>>m;
-	if(m%x) cout<<-1<<"\n";
-	else{
-		int x=0,p=m/x;
-		while(p%2==0) p/=2,x++;
-		while(p%3==0) p/=3,x++;
-		if(p!=1) cout<<-1<<"\n";
-		else cout<<x<<"\n";
+bool findelement(int *arr, int element, int rows, int columns)
+{
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < columns; j++)
+		{
+			if (element == *((arr+i*columns)+j))
+			{
+				return true;
+			}
+		}
 	}
+	return false;
+}
+
+int main()
+{
+	int r,c;
+	cin>>r>>c;
+	int arr[r][c];
+	for (int i = 0; i < r; i++)
+	{
+		for (int j = 0; j < c; j++)
+		{
+			cin >> arr[i][j];
+		}
+	}
+	cout << "Enter the element you want to find : ";
+	int element;
+	cin >> element;
+	if (findelement((int *)arr, element, r, c))
+	{
+		cout << "element found ";
+	}
+	else
+		cout << "not found";
+
 	return 0;
 }
