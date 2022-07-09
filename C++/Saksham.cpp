@@ -11,7 +11,6 @@ public:
     {
         row = r;
         col = c;
-        // cout<<"x";
     }
     void set(int i, int j, double val)
     {
