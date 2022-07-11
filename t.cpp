@@ -1,42 +1,29 @@
 #include "bits/stdc++.h"
 using namespace std;
+#define ll long long
+#define SPEED ios_base::sync_with_stdio(false);cin.tie(NULL)
 
-bool findelement(int *arr, int element, int rows, int columns)
-{
-	for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < columns; j++)
-		{
-			if (element == *((arr+i*columns)+j))
-			{
-				return true;
-			}
-		}
-	}
-	return false;
-}
-
-int main()
-{
-	int r,c;
-	cin>>r>>c;
-	int arr[r][c];
-	for (int i = 0; i < r; i++)
-	{
-		for (int j = 0; j < c; j++)
-		{
-			cin >> arr[i][j];
-		}
-	}
-	cout << "Enter the element you want to find : ";
-	int element;
-	cin >> element;
-	if (findelement((int *)arr, element, r, c))
-	{
-		cout << "element found ";
-	}
-	else
-		cout << "not found";
-
-	return 0;
+int main(){
+    SPEED;
+    int tt;cin>>tt;
+    while(tt--){
+        int n,k;
+        cin>>n>>k;
+        map<ll,ll> a,b;
+        for(int i=0;i<n;++i){
+            int x;cin>>x;
+            if(a[x]==0) a[x]=n-i;
+            b[x]=n-i;
+        }
+        ll q,w;
+        for(int i = 0 ; i<k ; ++i){
+            cin>>q>>w;
+            if(a[q]>=b[w] && a[q]!=0 && b[w]!=0){
+                cout<<"YES\n";
+            }else{
+                cout<<"NO\n";
+            }
+        }
+    }
+    return 0;
 }
