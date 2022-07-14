@@ -4,7 +4,7 @@ using namespace std;
 #define SPEED ios_base::sync_with_stdio(false);cin.tie(NULL)
 
 int main(){
-    SPEED;
+   // SPEED;
     int tt;cin>>tt;
     while(tt--){
         int n,k;
