@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  font-family: "Fredoka One", monospace;
+  background-image: url(http://surl.li/cmzmk);
+  background-size: cover;
+  color: rgb(173, 221, 221);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+/* NavBar */
+.nav-item {
+  font-family: "Fredoka One";
+  color: #6f7d8c;
+  background: rgb(150, 163, 236, 20%);
+  border: 1px solid rgb(150, 163, 236, 30%);
+  border-radius: 0.5rem;
+}
+
+.nav-link,
+i,
+a {
+  color: rgb(173, 221, 221);
+}
+
+/* Main */
+.main {
+  margin: 9.5% 6%;
+  margin-bottom: 18%;
+}
+
+.social-icon {
+  display: flex;
+  align-items: left;
+}
+
+/* About */
+#aboutme {
+  margin-bottom: 16%;
+}
+
+.img{
+  width: 23rem;
+  border-radius: 50%;
+}
+
+/* Work */
+#work {
+  margin-top: 12%;
+}
+
+.card {
+  background: rgb(150, 163, 236, 30%);
+}
+
+/* Contact */
+#contact {
+  margin-top: 9%;
+}

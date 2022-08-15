@@ -1,29 +1,19 @@
 #include "bits/stdc++.h"
 using namespace std;
 #define ll long long
-#define SPEED ios_base::sync_with_stdio(false);cin.tie(NULL)
+#define SPEED ios_base::sync_with_stdio(false);cin.tie(NULL);
 
-int main(){
-    SPEED;
-    int tt;cin>>tt;
-    while(tt--){
-        int n,k;
-        cin>>n>>k;
-        map<ll,ll> a,b;
-        for(int i=0;i<n;++i){
-            int x;cin>>x;
-            if(a[x]==0) a[x]=n-i;
-            b[x]=n-i;
-        }
-        ll q,w;
-        for(int i = 0 ; i<k ; ++i){
-            cin>>q>>w;
-            if(a[q]>=b[w] && a[q]!=0 && b[w]!=0){
-                cout<<"YES\n";
-            }else{
-                cout<<"NO\n";
-            }
-        }
+int main()
+{
+    int a=0,b,c=1,temp,i;
+    cout<<"Enter the number of terms:\n";
+    cin>>b;
+    
+    for (i=0;i<b;i++){
+        temp=a;
+        cout<<c<<'+'<<a<<'+'<<a+c<<"\n";
+        a=temp+c;
+        c=temp;
     }
     return 0;
 }
