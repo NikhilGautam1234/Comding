@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    SPEED
+    //SPEED
     int a=0,b,c=1,temp,i;
     cout<<"Enter the number of terms:\n";
     cin>>b;
